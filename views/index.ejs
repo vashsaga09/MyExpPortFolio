@@ -5,9 +5,16 @@
 <main class="container">
   <h1><%= title %></h1>
   <p>Welcome to <%= title %></p>
+  <% if(title === 'My Express Portfolio'){%>
+    <h2 class="MS">Mission Statement</h2>
+    <p class="mission-statement">My mission at Express Portfolio
+    <br>is creating and sharing my expertise 
+    <br>with innovation, imagination and originality</p>
+  <% } %>
+  
 </main>
 
-<%- include partials/bottom_nav.ejs %>  
+ 
 
 <%- include partials/footer.ejs %>
 

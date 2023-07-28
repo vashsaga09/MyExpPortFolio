@@ -1,0 +1,46 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/top_nav.ejs %>
+
+<!-- Add any necessary CSS or styles here -->
+<style>
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .projects-container {
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .button-add-project,
+  .button-display-projects {
+    display: inline-block;
+    padding: 20px;
+    margin: 10px;
+    background-color: #4285F4;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .button-add-project:hover,
+  .button-display-projects:hover {
+    background-color: #3367D6;
+  }
+</style>
+
+<h1>Projects Page</h1>
+
+<div class="projects-container">
+  <a href="/addProject" class="button-add-project">Add Project</a>
+  <a href="/displayProjects" class="button-display-projects">Display Projects</a>
+</div>
+
+<!-- Add any necessary JavaScript or scripts here -->
+
+<%- include partials/footer.ejs %>

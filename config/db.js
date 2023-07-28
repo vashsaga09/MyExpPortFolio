@@ -1,3 +1,3 @@
-module.exports={
-    "URI":"mongodb://127.0.0.1:27017/amazon"
-}
+module.exports = {
+    "URI": "mongodb://127.0.0.1:27017/Express_Portfolio"
+};

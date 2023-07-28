@@ -1,0 +1,47 @@
+<%- include partials/header.ejs %>
+
+<%- include partials/top_nav.ejs %>
+
+<main class="l-main">
+  <section class="projects">
+    <div class="container">
+      <div class="projects-content">
+        <h1>Projects</h1>
+        <p>Here are a few projects I have done so far:</p>
+      </div>
+
+      <div class="projects-table">
+        <div class="table-row table-header">
+          <div class="table-cell">Project Title</div>
+          <div class="table-cell">Project Description</div>
+          <div class="table-cell">Status</div>
+          <div class="table-cell">Actions</div> <!-- New column header for Actions -->
+        </div>
+
+        <% finishedProjects.forEach((project) => { %>
+          <div class="table-row">
+            <div class="table-cell"><%= project.title %></div>
+            <div class="table-cell"><%= project.description %></div>
+            <div class="table-cell"><%= project.Status %></div>
+            <div class="table-cell">
+              <a href="/updateProject/<%= project._id %>"><button type="button" class="btn btn-primary">Update</button></a>
+            </div>
+          </div>
+        <% }) %>
+
+        <% ongoingProjects.forEach((project) => { %>
+          <div class="table-row">
+            <div class="table-cell"><%= project.title %></div>
+            <div class="table-cell"><%= project.description %></div>
+            <div class="table-cell"><%= project.Status %></div>
+            <div class="table-cell">
+              <a href="/updateProject/<%= project._id %>"><button type="button" class="btn btn-primary">Update</button</a>
+            </div>
+          </div>
+        <% }) %>
+      </div>
+    </div>
+  </section>
+</main>
+
+<%- include partials/footer.ejs %>
